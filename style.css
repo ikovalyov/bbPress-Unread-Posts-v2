@@ -1,0 +1,20 @@
+.bbpresss_unread_posts_icon{
+	float:left;
+	margin-right:6px;
+}
+
+.bbpresss_unread_posts_icon a img{
+	margin-top:2px;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+
+.bbpress_unread_posts_mark_as_read_button_container{
+	display:inline-block;
+	margin-right:5px;
+}
+
+.bbpress_unread_posts_mark_as_read_button_container input[type="submit"]{
+	margin:0px;
+}
