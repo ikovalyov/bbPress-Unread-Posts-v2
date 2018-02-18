@@ -1,0 +1,69 @@
+msgid ""
+msgstr "MIME-Version: 1.0\n"
+
+#. Name.
+msgid "bbPress Unread Posts v2"
+msgstr ""
+
+#. Found in description paragraph.
+msgid ""
+"Simple Plugin which shows whether a registered user has read a Post or not. \n"
+"You can also choose to show the number of unread Posts at Forum level.\n"
+"This Plugin is an update to the older <a href=\"https://wordpress.org/plugins/bbpress-unread-posts/\">bbpress-unread-posts</a> Plugin."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Upload the 'bbpress-unread-posts v2' folder to the '/wp-content/plugins/' directory."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Activate the plugin through the 'Plugins' menu in WordPress"
+msgstr ""
+
+#. Found in installation list item.
+msgid "In the settings tab you can change the icons by providing an URL."
+msgstr ""
+
+#. Found in installation list item.
+msgid "You may also wish to enable/disable the number of unread posts."
+msgstr ""
+
+#. Found in installation paragraph.
+msgid "Optional:"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Initial release"
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "Added new functionality: amount of unread posts can be shown"
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "Bugfix for forum level"
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "Bugfixes and new images"
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "Added an options page under the settings menu."
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "Fixed Bug with all unread button not saving"
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "added a mark all as unread button"
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "added Logging and fixed a update bug"
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "Fixed Error with Imagepath"
+msgstr ""

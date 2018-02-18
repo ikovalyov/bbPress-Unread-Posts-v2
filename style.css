@@ -1,6 +1,7 @@
 .bbpresss_unread_posts_icon{
 	float:left;
 	margin-right:6px;
+	max-width: 45px;
 }
 
 .bbpresss_unread_posts_icon a img{
@@ -10,11 +11,47 @@
 	box-shadow:none;
 }
 
-.bbpress_unread_posts_mark_as_read_button_container{
-	display:inline-block;
-	margin-right:5px;
+.markedUnread{
+	float: right;
 }
 
-.bbpress_unread_posts_mark_as_read_button_container input[type="submit"]{
+.bbpress_mark_all_read_wrapper{
+	transform: scale(0.8);
+	transform-origin: right;
+}
+
+.bbpress_mark_all_read{
+	display:inline-block;
+	margin-right:5px;
+	width: 100%;
+}
+
+.bbpress_mark_all_read input{
+	float:right;
+}
+
+.bbpress_mark_all_read input[type="submit"]{
 	margin:0px;
 }
+
+
+.bbpresss_unread_posts_amount{
+    float: right;
+    font-size: 9px;
+}
+
+/**********************/
+/*
+/* settings
+/*
+/**********************/
+
+.bbp-unread-post-form-table input[type=text]{
+	width: 500px;
+}
+
+.bbp-unread-post-form-table th {
+    width: 200px;
+    text-align: left;
+}
+
