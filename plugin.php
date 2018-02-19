@@ -205,8 +205,32 @@ function bbp_unread_posts_get_root_forum_id() {
  * @return bool
  */
 function bbp_is_topic_unread( $topic_id ) {
+	static $cached_meta;
+	if ( empty( $cached_meta ) ) {
+		global $wpdb;
+		$table     = _get_meta_table( 'post' );
+		$column    = sanitize_key( 'post_id' );
+		$query     = "SELECT $column, meta_key, meta_value FROM $table WHERE meta_key = '" . bbp_unread_posts_get_last_visit_meta_key() . "'";
+		$meta_list = $wpdb->get_results( $query, ARRAY_A );
+		if ( ! empty( $meta_list ) ) {
+			foreach ( $meta_list as $metarow ) {
+				$mpid = intval( $metarow[ $column ] );
+				$mkey = $metarow['meta_key'];
+				$mval = $metarow['meta_value'];
+
+				if ( ! isset( $cached_meta[ $mpid ] ) || ! is_array( $cached_meta[ $mpid ] ) ) {
+					$cache[ $mpid ] = [];
+				}
+				if ( ! isset( $cached_meta[ $mpid ][ $mkey ] ) || ! is_array( $cached_meta[ $mpid ][ $mkey ] ) ) {
+					$cache[ $mpid ][ $mkey ] = [];
+				}
+
+				$cached_meta[ $mpid ][ $mkey ][] = $mval;
+			}
+		}
+	}
 	$topic_last_active_time = bbp_convert_date( get_post_meta( $topic_id, '_bbp_last_active_time', true ) );
-	$last_visit_time        = get_post_meta( $topic_id, bbp_unread_posts_get_last_visit_meta_key(), true );
+	$last_visit_time        = $cached_meta[ $topic_id ][ bbp_unread_posts_get_last_visit_meta_key() ][0];
 	bbp_unread_posts_clog( 'Last Active Time ' . $topic_last_active_time . '   >   last visit time' . $last_visit_time );
 	return $topic_last_active_time > $last_visit_time;
 }
